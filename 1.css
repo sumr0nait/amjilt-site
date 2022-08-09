@@ -3,7 +3,7 @@
     padding: auto;
 }
 .face {
-    height: 100vh;
+    height: 800px;
     background-image: url("/site/img/img2.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,6 +13,9 @@
 .top { 
     display: grid;
     grid-template-columns: 50% 50%; 
+    position: fixed;
+    gap: 550px;
+    animation: top 1s;
 }
 .logo img{
     height: 40px;
@@ -27,14 +30,22 @@
     margin-left: 25px;
 }
 .page-switch a:hover {
-    border-top: 2px solid rgb(176, 55, 201);
+    border-top: 2px solid #E92EFB;
     padding-top: 20px;
     transition-duration: 0.7s;
-    text-shadow: 0px 0px 40px rgb(176, 55, 201);
+    text-shadow: 0px 0px 40px #E92EFB;
+    color: #E92EFB;
+}
+@keyframes top {
+    from {top: -50px}
+    to {top: 20px}
 }
 
-/* body heseg ehlel */
-
+/* body text ehlel */
+.text {
+    position: relative;
+    animation: face-text 1s;
+}
 .text {
     text-align: center;
     position: relative;
@@ -77,27 +88,174 @@
 .text h4 span {
     color: #E92EFB;
 }
-
+@keyframes face-text{
+    from {left: 500px}
+    to {left: 0}
+}
 
 /* body ehlel */
 .body {
-    height: 100vh;
-    background-color: rgb(56, 51, 131);
+    height: 800px;
+    background-image: linear-gradient(rgb(56, 51, 131), rgb(83, 78, 151));
 }
 .angiud {
     position: relative;
-    top: 15vh;
-    height: 70vh;
-    /* border: 1px solid black; */
+    top: 20px;
+    height: 100vh;
     display: grid;
     grid-template-rows: 50% 50%;
+    gap: -50px;
 }
-.deed-b, deed-z{
-    width: 450px;
+.deed {
+    margin-left: 250px ;
+    display: flex;
+    gap: 150px;
 }
-.dood-b, dood-z {
-    width: 450px;
+.dood {
+    margin-right: 250px;
+    display: flex;
+    gap: 150px;
 }
+.deed-z, .deed-b, .dood-z, .dood-b {
+    display: flex;
+    flex-direction: column;
+}
+.deed-z img, .deed-b img, .dood-z img{
+    border-radius: 10px;
+    width: 400px;
+}
+.dood-b img {
+    width: 340px;
+    border-radius: 10px;
+}
+.deed-z a, .deed-b a, .dood-z a, .dood-b a {
+    text-decoration: none;
+    color: rgb(176, 55, 201);
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+.deed-z img:hover, .deed-b img:hover, .dood-z img:hover, .dood-b img:hover {
+    transform: scale(1.05);
+    transition-duration: 1s;
+    box-shadow: 0px 0px 60px #E92EFB;
+}
+.deed-z a:hover, .deed-b a:hover, .dood-z a:hover, .dood-b a:hover {
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 20px #E92EFB;
+}
+
+
+
+
+/* body-end heseg ehlel */
+
+.end {
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgb(83, 78, 151), rgb(159, 117, 207));
+}   
+.container {
+    margin: 0 300px 0 300px;
+}
+.tex {
+    margin-top: 100px;
+}
+.tex p {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(169, 46, 251);
+    text-shadow: 0px 0px 5px black;
+}
+/* .pros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    height: 60vh;
+}
+.pr1, .pr2, .pr3, .pr4, .pr5 {
+    height: 250px;
+    width: 170px;
+}
+.pr1 {
+    background: url("/site/img/battuvshin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+}
+.pr2 {
+    background: url("/site/img/dashmaa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -80px;
+}
+.pr3 {
+    background: url("/site/img/hosbayr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -120px;
+}
+.pr4 {
+    background: url("/site/img/monhbold.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -10px;
+}
+.pr5 {
+    background: url("/site/img/taichir.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -20px;
+}
+.te {
+    background-color: rgb(56, 51, 131);
+    opacity: 0.6;
+    height: 100%;
+    overflow: hidden;
+    width: 0;
+}
+.te p{
+    text-align: center;
+    font-size: 18px;
+    color:rgb(176, 55, 201);
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    top: 100px;
+
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.te p span {
+    color: black;
+}
+.pr1:hover .te{
+    width: 100%;
+    transition-duration: 0.8s;
+}
+.pr2:hover .te{
+    width: 100%;
+    transition-duration: 0.8s;
+}
+.pr3:hover .te{
+    width: 100%;
+    transition-duration: 0.8s;
+}
+.pr4:hover .te{
+    width: 100%;
+    transition-duration: 0.8s;
+}
+.pr5:hover .te{
+    width: 100%;
+    transition-duration: 0.8s;
+} */
+
+
+
 
 
 
