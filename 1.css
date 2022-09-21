@@ -2,6 +2,8 @@
   margin: auto;
   padding: auto;
 }
+/* FACE */
+
 .face {
   height: 800px;
   background-image: url("/site/img/img2.jpeg");
@@ -46,6 +48,7 @@
 }
 
 /* body text ehlel */
+
 .text {
   position: relative;
   animation: face-text 1s;
@@ -93,13 +96,16 @@
 @keyframes face-text {
   from {
     left: 500px;
+    opacity: 0;
   }
   to {
     left: 0;
+    opacity: 1;
   }
 }
 
 /* body ehlel */
+
 .body {
   height: 800px;
   background-image: linear-gradient(rgb(56, 51, 131), rgb(83, 78, 151));
@@ -116,11 +122,31 @@
   margin-left: 250px;
   display: flex;
   gap: 150px;
+  animation: deed 2s;
+  position: relative;
+}
+@keyframes deed {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 0;
+  }
 }
 .dood {
   margin-right: 250px;
   display: flex;
   gap: 150px;
+  animation: dood 2s;
+  position: relative;
+}
+@keyframes dood {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0;
+  }
 }
 .deed-z,
 .deed-b,
@@ -203,6 +229,16 @@
   width: 130px;
   animation: pros 2s;
   position: relative;
+  border-radius: 10px;
+}
+.pr1:hover .te,
+.pr2:hover .te,
+.pr3:hover .te,
+.pr4:hover .te,
+.pr5:hover .te {
+  width: 100%;
+  transition-duration: 0.8s;
+  border-radius: 10px;
 }
 @keyframes pros {
   from {
@@ -248,7 +284,7 @@
   height: 100%;
   overflow: hidden;
   width: 0;
-  background-color: rgb(169, 46, 251);
+  background-image: linear-gradient(rgb(178, 69, 251), rgb(210, 142, 255));
 }
 .te p {
   text-align: center;
@@ -266,24 +302,32 @@
 .te p span {
   color: black;
 }
-.pr1:hover .te,
-.pr2:hover .te,
-.pr3:hover .te,
-.pr4:hover .te,
-.pr5:hover .te {
-  width: 100%;
-  transition-duration: 0.8s;
-}
 
 /* footer ehlel */
 
 .footer {
-  height: 100vh;
+  height: 50vh;
+  background-image: linear-gradient(rgb(159, 117, 207), rgb(217, 173, 239));
 }
-.footer img {
-  width: 100%;
+.footer a {
+  border: 1px solid red;
+  border-radius: 40px;
+  padding: 20px;
+}
+.footer-end {
   height: 300px;
-  object-fit: cover;
+  background-color: rgba(73, 26, 126, 0.784);
   position: relative;
-  top: 350px;
+  top: 100px;
+}
+.icons {
+  text-align: center;
+}
+.icons i {
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  margin: 30px 10px 0 10px;
 }
